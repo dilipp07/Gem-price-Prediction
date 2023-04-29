@@ -12,15 +12,15 @@ from src.components.model_trainer import ModelTrainer
 
 if __name__=="__main__":
     try:
-        logging.info("data injestion in pipeine is initiated")
+
         obj=DataInjestion()
         train_data_path,test_data_path=obj.initate_data_injestion()
         
         data_transformation=DataTransformation()
         train_arr,test_arr,_=data_transformation.initaite_data_transformation(train_data_path,test_data_path)
-        logging.info("model trainer is initiated")
         model_trainer=ModelTrainer()
         model_trainer.initiate_model_trainer(train_arr,test_arr)
     
     except Exception as e :
+        logging.info("error occured in trainering_pipeline")
         raise CustomException(e,sys)
