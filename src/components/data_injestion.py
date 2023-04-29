@@ -27,7 +27,7 @@ class DataInjestion:
         logging.info("entered the data injestion method or component")
 
         try:
-            df=pd.read_csv(r"C:\Users\dilip\Gem-price-Prediction\NoteBook\data.csv")
+            df=pd.read_csv(r"C:\Users\dilip\try\Gem-price-Prediction\NoteBook\data.csv")
             logging.info("Exported the dataset as dataframe")
 
             os.makedirs(os.path.dirname(self.injestion_config.raw_data_path),exist_ok=True)
@@ -52,14 +52,6 @@ class DataInjestion:
 
 
 
-##run data
-
-if __name__=="__main__":
-    obj=DataInjestion()
-    train_data_path,test_data_path=obj.initate_data_injestion()
-    
-    data_transformation=DataTransformation()
-    train_arr,test_arr,_=data_transformation.initaite_data_transformation(train_data_path,test_data_path)
 
 
     
