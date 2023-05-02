@@ -18,5 +18,5 @@ def get_requirements(file_path:str)->List[str]:
 setup(name="RegressorProject",
 version='0.0.1',author='Dilip',author_email='dilipkupanda23@gmail.com',
 packages=find_packages(),
-install_requirements=get_requirements(r"\Gem-price-Prediction\requirements.txt")  )
+install_requirements=get_requirements(r"requirements.txt")  )
 
