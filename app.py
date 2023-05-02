@@ -36,6 +36,7 @@ def predict_datapoint():
             clarity = request.form.get('clarity')
         )
         final_new_data=data.get_data_as_dataframe()
+        print(final_new_data)
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
