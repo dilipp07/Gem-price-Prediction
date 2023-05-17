@@ -97,7 +97,8 @@ class DataTransformation:
 
             logging.info("Applying preprocessing object on training and testing datasets.")
             
-
+            
+            print(input_feature_train_arr.shape,target_feature_train_df.shape)
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
